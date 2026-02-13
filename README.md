@@ -16,7 +16,7 @@
 ## Installation
 
 ```bash
-pip install easy-pass-gen
+pip install mysoly-easy-pass-gen
 ```
 
 ## Usage (CLI)
