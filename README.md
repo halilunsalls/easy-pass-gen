@@ -104,6 +104,9 @@ print(f"TOTP Secret: {totp_secret}")
 
 ## Version History
 
+- **0.5.1** (2026-02-13)
+  - PyPI publishing automation.
+
 - **0.5.0** (2026-02-13)
   - Added `generate_url_safe_token`.
   - Added `generate_hex_token`.
