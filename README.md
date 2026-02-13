@@ -104,6 +104,9 @@ print(f"TOTP Secret: {totp_secret}")
 
 ## Version History
 
+- **0.5.2** (2026-02-13)
+  - Toml file version fixed.
+
 - **0.5.1** (2026-02-13)
   - PyPI publishing automation.
 
