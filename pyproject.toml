@@ -5,6 +5,7 @@ build-backend = "hatchling.build"
 [project]
 name = "mysoly-easy-pass-gen"
 dynamic = ["version"]
+version = "0.5.0"
 description = "A very basic and fast password generator."
 readme = "README.md"
 requires-python = ">=3.9"

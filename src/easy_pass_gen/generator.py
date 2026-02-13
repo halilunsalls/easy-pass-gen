@@ -1,6 +1,7 @@
 import string
 import secrets
 import math
+import base64
 from .wordlist import WORD_LIST
 
 def generate_password(
@@ -99,7 +100,8 @@ def estimate_strength(password):
     else:
         score = 5
         label = "Very Strong"
-        
+    
+    
     return {"entropy": entropy, "score": score, "label": label}
 
 
@@ -108,4 +110,31 @@ def get_entropy(length, pool_size):
     if pool_size <= 0: return 0
     entropy = length * math.log2(pool_size)
     return round(entropy, 2)
+
+
+def generate_url_safe_token(nbytes=32):
+    """
+    Generates a secure URL-safe text string.
+    """
+    return secrets.token_urlsafe(nbytes)
+
+
+def generate_hex_token(nbytes=32):
+    """
+    Generates a secure hex string.
+    """
+    return secrets.token_hex(nbytes)
+
+
+def generate_totp_secret(length=32):
+    """
+    Generates a base32 secret for TOTP (Time-based One-Time Password).
+    Useful for MFA applications (e.g., Google Authenticator).
+    """
+    # Generate random bytes
+    random_bytes = secrets.token_bytes(length)
+    # Encode to base32
+    secret = base64.b32encode(random_bytes).decode('utf-8')
+    # Remove padding usually not needed for TOTP apps
+    return secret.rstrip('=')
 
