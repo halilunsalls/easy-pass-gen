@@ -73,7 +73,7 @@ easy-pass-gen check "MySuperPas$word123"
 To use it as a library in your projects:
 
 ```python
-from easy_pass_gen import generate_password, generate_passphrase, generate_pin, estimate_strength
+from easy_pass_gen import generate_password, generate_passphrase, generate_pin, estimate_strength, generate_url_safe_token, generate_hex_token, generate_totp_secret
 
 # 1. Standard Password
 password = generate_password(length=16, use_symbols=True)
@@ -103,6 +103,9 @@ print(f"TOTP Secret: {totp_secret}")
 ```
 
 ## Version History
+
+- **0.5.3** (2026-02-13)
+  - Update README.md and add installation instructions.
 
 - **0.5.2** (2026-02-13)
   - Toml file version fixed.
