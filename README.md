@@ -91,9 +91,23 @@ print(f"PIN: {pin}")
 # 4. Strength Check
 strength = estimate_strength(password)
 print(f"Strength: {strength['label']} (Score: {strength['score']}/5)")
+# 5. Security Tokens
+token = generate_url_safe_token(32)
+print(f"Token: {token}")
+
+hex_token = generate_hex_token(32)
+print(f"Hex: {hex_token}")
+
+totp_secret = generate_totp_secret()
+print(f"TOTP Secret: {totp_secret}")
 ```
 
 ## Version History
+
+- **0.5.0** (2026-02-13)
+  - Added `generate_url_safe_token`.
+  - Added `generate_hex_token`.
+  - Added `generate_totp_secret`.
 
 - **0.4.0** (2026-02-13)
   - Added GitHub Actions for automatic publishing.
