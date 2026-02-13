@@ -3,7 +3,7 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "easy-pass-gen"
+name = "mysoly-easy-pass-gen"
 dynamic = ["version"]
 description = "A very basic and fast password generator."
 readme = "README.md"

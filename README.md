@@ -95,6 +95,9 @@ print(f"Strength: {strength['label']} (Score: {strength['score']}/5)")
 
 ## Version History
 
+- **0.4.0** (2026-02-13)
+  - Added GitHub Actions for automatic publishing.
+
 - **0.3.0** (2026-02-13)
   - Added GitHub Actions for automatic publishing.
 
